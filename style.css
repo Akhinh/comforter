@@ -1,0 +1,475 @@
+/* ═══════════════════════════════════════════════════
+   THE COMFORTER — Global Stylesheet
+   Themes driven by CSS custom properties that the
+   AmbientBackground system swaps per-condition.
+═══════════════════════════════════════════════════ */
+
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+:root {
+  /* Base palette */
+  --bg:         #04060d;
+  --surface:    #0a0d1a;
+  --card:       rgba(255,255,255,0.034);
+  --card-h:     rgba(255,255,255,0.062);
+  --text:       #f0ebe0;
+  --text-s:     rgba(240,235,224,0.68);
+  --text-d:     rgba(240,235,224,0.36);
+  --border:     rgba(201,169,110,0.17);
+  --border-s:   rgba(255,255,255,0.055);
+  --r:          14px;
+  --rl:         22px;
+
+  /* Accent — overridden per-condition by AmbientBackground */
+  --accent:      #c9a96e;
+  --accent-l:    #e8c98a;
+  --accent-dim:  rgba(201,169,110,0.28);
+  --accent-glow: rgba(201,169,110,0.12);
+  --bg-overlay:  rgba(10,12,24,0.75);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* ── CANVAS LAYERS ── */
+#cosmos, #verse-bg {
+  position: fixed; inset: 0;
+  pointer-events: none;
+}
+#cosmos    { z-index: 0; }
+#verse-bg  { z-index: 2; }   /* drawn by AmbientBackground, opacity handled in JS */
+
+/* ── GEOMETRIC MANDALA BG ── */
+.geo-bg {
+  position: fixed; inset: 0; z-index: 1;
+  pointer-events: none; overflow: hidden;
+  opacity: 0.055;
+}
+.geo-bg svg {
+  position: absolute;
+  width: 130vmax; height: 130vmax;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: geoSpin 150s linear infinite;
+}
+@keyframes geoSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+/* ── APP WRAPPER ── */
+#app { position: relative; z-index: 10; min-height: 100vh; }
+
+/* ═══════════════════════════════════════════════════
+   SCREENS
+═══════════════════════════════════════════════════ */
+.screen {
+  display: none;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.screen.active {
+  display: flex;
+  animation: screenIn 0.75s cubic-bezier(0.16,1,0.3,1) both;
+}
+@keyframes screenIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════════════════
+   SPLASH SCREEN
+═══════════════════════════════════════════════════ */
+#splash {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.splash-mandala {
+  position: absolute;
+  width: min(68vmin, 480px); height: min(68vmin, 480px);
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.065;
+  animation: mandalaRotate 85s linear infinite;
+  pointer-events: none;
+}
+@keyframes mandalaRotate { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+.splash-inner {
+  position: relative; z-index: 2;
+  max-width: 500px;
+}
+
+.bismillah {
+  font-family: 'Amiri', serif;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  margin-bottom: 2.4rem;
+  opacity: 0;
+  animation: fadeUp 1s 0.3s ease both;
+  text-shadow: 0 0 40px var(--accent-glow);
+}
+
+.app-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 10vw, 5.2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  opacity: 0;
+  animation: fadeUp 1s 0.6s ease both;
+}
+.app-title .title-accent {
+  display: block;
+  background: linear-gradient(135deg, var(--accent-l), var(--accent), #9a6e30);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-tagline {
+  font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+  color: var(--text-s);
+  font-style: italic; font-weight: 300;
+  margin-top: 0.9rem; letter-spacing: 0.1em;
+  opacity: 0; animation: fadeUp 1s 0.9s ease both;
+}
+
+.ornament {
+  display: flex; align-items: center; gap: 0.9rem;
+  margin: 2.2rem auto; width: fit-content;
+  opacity: 0; animation: fadeUp 1s 1.05s ease both;
+}
+.ornament::before, .ornament::after {
+  content: ''; display: block; width: 55px; height: 1px;
+}
+.ornament::before { background: linear-gradient(90deg, transparent, var(--accent)); }
+.ornament::after  { background: linear-gradient(90deg, var(--accent), transparent); }
+.ornament-diamond {
+  width: 6px; height: 6px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
+.splash-desc {
+  font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+  color: var(--text-s); line-height: 1.82; font-weight: 300;
+  max-width: 370px; margin: 0 auto 2.3rem;
+  opacity: 0; animation: fadeUp 1s 1.15s ease both;
+}
+
+/* ── CTA Button ── */
+.btn-enter {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.05rem; letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.3rem;
+  border-radius: 100px; cursor: pointer;
+  position: relative; overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s;
+  opacity: 0; animation: fadeUp 1s 1.3s ease both;
+}
+.btn-enter::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--accent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.btn-enter:hover { color: var(--bg); box-shadow: 0 0 40px var(--accent-dim); }
+.btn-enter:hover::before { transform: scaleX(1); }
+.btn-enter span, .btn-enter em { position: relative; }
+.btn-enter em { font-style: normal; transition: transform 0.3s; }
+.btn-enter:hover em { transform: translateX(4px); }
+
+/* ═══════════════════════════════════════════════════
+   CONDITIONS SCREEN
+═══════════════════════════════════════════════════ */
+#conditions {
+  padding: 1.8rem 1.2rem 3rem;
+  align-items: center;
+}
+
+.screen-header {
+  text-align: center; max-width: 580px;
+  margin: 0 auto 2.5rem;
+}
+
+.back-btn {
+  background: none; border: none;
+  color: var(--text-d);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.98rem; letter-spacing: 0.1em;
+  cursor: pointer; display: inline-flex; align-items: center; gap: 0.45rem;
+  margin-bottom: 1.8rem; transition: color 0.22s;
+}
+.back-btn:hover { color: var(--accent); }
+.back-btn svg { width: 15px; height: 15px; }
+
+.screen-label {
+  font-size: 0.74rem; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 0.6rem;
+}
+.screen-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.7rem, 5vw, 2.6rem);
+  font-weight: 400; font-style: italic;
+  line-height: 1.2; margin-bottom: 0.6rem;
+}
+.screen-subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  color: var(--text-s); font-weight: 300; font-style: italic;
+}
+
+/* ── Condition Grid ── */
+.conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(155px, 44vw), 1fr));
+  gap: 0.9rem;
+  width: 100%; max-width: 840px;
+}
+
+.cond-card {
+  background: var(--card);
+  border: 1px solid var(--border-s);
+  border-radius: var(--r);
+  padding: 1.4rem 0.9rem;
+  text-align: center; cursor: pointer;
+  position: relative; overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  animation: cardIn 0.55s cubic-bezier(0.16,1,0.3,1) both;
+}
+/* Each card's mini canvas — drawn by Renderer */
+.cond-card canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  opacity: 0.28;
+  transition: opacity 0.4s;
+}
+.cond-card:hover { border-color: var(--border); transform: translateY(-5px); box-shadow: 0 18px 44px rgba(0,0,0,.46), 0 0 0 1px var(--accent-dim); }
+.cond-card:hover canvas { opacity: 0.44; }
+
+@keyframes cardIn {
+  from { opacity: 0; transform: scale(0.9) translateY(14px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.cond-icon {
+  font-size: 1.8rem; display: block; line-height: 1;
+  margin-bottom: 0.65rem; position: relative; z-index: 2;
+  filter: drop-shadow(0 0 8px var(--accent-glow));
+}
+.cond-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem; font-weight: 400;
+  color: var(--text); line-height: 1.3;
+  position: relative; z-index: 2;
+}
+.cond-sub {
+  font-size: 0.74rem; color: var(--text-d);
+  font-style: italic; margin-top: 0.22rem;
+  position: relative; z-index: 2;
+}
+
+/* ═══════════════════════════════════════════════════
+   VERSE SCREEN
+═══════════════════════════════════════════════════ */
+#verse-display {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1.2rem 3rem;
+  flex-direction: column;
+}
+
+.verse-container {
+  max-width: 700px; width: 100%;
+  margin: 0 auto;
+}
+
+.condition-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent-glow);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.38rem 1.1rem;
+  font-size: 0.82rem; color: var(--accent-l);
+  letter-spacing: 0.07em;
+  margin-bottom: 1.4rem;
+}
+
+/* ── Verse Card ── */
+.verse-card {
+  background: var(--bg-overlay);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--border-s);
+  border-radius: var(--rl);
+  padding: clamp(1.4rem, 5vw, 2.8rem);
+  position: relative; overflow: hidden;
+  box-shadow: 0 28px 70px rgba(0,0,0,0.5);
+  animation: verseReveal 0.9s cubic-bezier(0.16,1,0.3,1) both;
+}
+.verse-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+@keyframes verseReveal {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); filter: blur(4px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
+}
+
+/* Language Tabs */
+.lang-tabs {
+  display: flex; gap: 0.4rem; margin-bottom: 1.8rem;
+  background: rgba(0,0,0,0.36); border-radius: 100px;
+  padding: 0.28rem; width: fit-content;
+}
+.ltab {
+  background: none; border: none; color: var(--text-d);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem; letter-spacing: 0.07em;
+  padding: 0.38rem 0.95rem; border-radius: 100px;
+  cursor: pointer; transition: all 0.22s;
+}
+.ltab.active { background: var(--accent); color: var(--bg); font-weight: 600; }
+.ltab:hover:not(.active) { color: var(--accent-l); }
+
+/* Arabic */
+.v-arabic {
+  font-family: 'Amiri', serif;
+  font-size: clamp(1.5rem, 4.5vw, 2.3rem);
+  color: #d4b483;
+  line-height: 2; text-align: right; direction: rtl;
+  margin-bottom: 1.4rem;
+  text-shadow: 0 0 30px rgba(212,180,131,0.16);
+}
+
+/* Translation */
+.v-trans {
+  font-size: clamp(1.05rem, 2.8vw, 1.42rem);
+  color: var(--text); line-height: 1.85;
+  font-style: italic; font-weight: 300;
+  margin-bottom: 1.4rem;
+  position: relative; padding-left: 0.4rem;
+}
+.v-trans::before {
+  content: '\201C';
+  font-size: 3.8rem; color: var(--accent-dim);
+  position: absolute; top: -1.4rem; left: -0.3rem;
+  font-family: 'Playfair Display', serif; line-height: 1;
+}
+
+/* Reference */
+.v-ref {
+  font-size: 0.84rem; color: var(--accent);
+  letter-spacing: 0.13em; text-transform: uppercase;
+  margin-top: 1.3rem; padding-top: 1.3rem;
+  border-top: 1px solid var(--border-s);
+}
+
+/* Reflection */
+.v-reflection {
+  margin-top: 1.2rem;
+  background: rgba(0,0,0,0.22);
+  border-left: 2px solid var(--accent-dim);
+  padding: 0.9rem 1.1rem;
+  border-radius: 0 var(--r) var(--r) 0;
+}
+.refl-label {
+  font-size: 0.72rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--accent);
+  margin-bottom: 0.42rem;
+}
+.refl-text {
+  font-size: 0.93rem; color: var(--text-s);
+  line-height: 1.74; font-style: italic;
+}
+
+/* Verse Actions */
+.verse-actions {
+  display: flex; align-items: center; justify-content: center;
+  gap: 0.9rem; margin-top: 1.8rem; flex-wrap: wrap;
+}
+.btn-action {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-s);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.92rem; letter-spacing: 0.1em;
+  padding: 0.65rem 1.4rem; border-radius: 100px;
+  cursor: pointer; transition: all 0.23s;
+  display: flex; align-items: center; gap: 0.45rem;
+}
+.btn-action:hover { border-color: var(--accent); color: var(--accent); box-shadow: 0 0 20px var(--accent-glow); }
+.btn-action.primary { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.btn-action.primary:hover { background: var(--accent-l); border-color: var(--accent-l); }
+
+/* ═══════════════════════════════════════════════════
+   INSTALL BANNER
+═══════════════════════════════════════════════════ */
+#install-banner {
+  position: fixed; bottom: 1.4rem; left: 50%;
+  transform: translateX(-50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 0.65rem 1.4rem;
+  display: flex; align-items: center; gap: 0.9rem;
+  font-size: 0.84rem; color: var(--text-s);
+  z-index: 999;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.55);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.5s 1.8s;
+  white-space: nowrap;
+}
+#install-banner.show { opacity: 1; pointer-events: all; }
+#install-banner .ib-install {
+  background: var(--accent); color: var(--bg);
+  border: none; border-radius: 100px;
+  padding: 0.3rem 0.95rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 0.88rem; font-weight: 600;
+  cursor: pointer; letter-spacing: 0.04em;
+}
+#install-banner .ib-dismiss {
+  background: none; border: none;
+  color: var(--text-d); font-size: 1.1rem; cursor: pointer;
+}
+
+/* ═══════════════════════════════════════════════════
+   UTILITIES & ANIMATIONS
+═══════════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 3px; }
+
+::selection { background: var(--accent-dim); color: var(--text); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 480px) {
+  .conditions-grid { grid-template-columns: repeat(2, 1fr); }
+  .lang-tabs { flex-wrap: wrap; border-radius: var(--r); }
+  #install-banner { font-size: 0.76rem; padding: 0.55rem 1rem; }
+}

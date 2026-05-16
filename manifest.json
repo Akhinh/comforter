@@ -1,0 +1,29 @@
+{
+  "name": "The Comforter",
+  "short_name": "Comforter",
+  "description": "Quranic verses for every burden of the soul",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#04060d",
+  "theme_color": "#04060d",
+  "orientation": "portrait-primary",
+  "lang": "en",
+  "categories": ["lifestyle", "religion", "spirituality"],
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [],
+  "related_applications": []
+}
