@@ -1,25 +1,27 @@
 /**
  * THE COMFORTER — Complete Verse Database
- * 6 verses per condition × 16 conditions = 96 Quranic verses
- * Each entry: { arabic, english, french, ref, reflection }
+ * 12 verses per condition × 16 conditions = 192 Quranic verses
+ * Each: { arabic, english, french, ref, reflection }
  */
 export const VERSES = {
 
-  /* ──────────────── FINANCIAL HARDSHIP ──────────────── */
+  /* ══════════════════════════════════════════
+     FINANCIAL HARDSHIP — 12 verses
+  ══════════════════════════════════════════ */
   poverty: [
     {
       arabic: 'وَمَن يَتَوَكَّلْ عَلَى ٱللَّهِ فَهُوَ حَسْبُهُۥٓ ۚ إِنَّ ٱللَّهَ بَـٰلِغُ أَمْرِهِۦ',
       english: 'And whoever places their trust in Allah — He will be sufficient for them. Indeed, Allah accomplishes His purpose.',
       french: 'Quiconque place sa confiance en Allah, Allah lui suffit. Allah accomplit certainement Son dessein.',
       ref: 'At-Talaq 65:3',
-      reflection: 'True provision comes from Allah alone. Wealth may leave, but He never does. Turn to Him and you shall not truly lack.',
+      reflection: 'True provision comes from Allah alone. Wealth may leave, but He never does. Trust Him and you shall not truly lack.',
     },
     {
       arabic: 'وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ',
       english: 'And your Lord will give to you, and you will be satisfied.',
       french: 'Ton Seigneur te donnera, et tu seras satisfait.',
       ref: 'Ad-Duha 93:5',
-      reflection: 'This is a personal promise — not a general one. Your Lord will give you specifically until you are pleased.',
+      reflection: 'This is a personal promise — not a general one. Your Lord will give you specifically until you are fully pleased.',
     },
     {
       arabic: 'وَفِى ٱلسَّمَآءِ رِزْقُكُمْ وَمَا تُوعَدُونَ',
@@ -33,7 +35,7 @@ export const VERSES = {
       english: 'There is no creature on earth but that upon Allah is its provision.',
       french: 'Il n\'y a pas de créature sur terre dont la subsistance n\'incombe à Allah.',
       ref: 'Hud 11:6',
-      reflection: 'Not a single ant or bird is forgotten. You — who can call upon Him — are more than remembered.',
+      reflection: 'Not a single ant or bird is forgotten. You — who can call upon Him by name — are more than remembered.',
     },
     {
       arabic: 'إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا',
@@ -49,37 +51,74 @@ export const VERSES = {
       ref: 'At-Talaq 65:2–3',
       reflection: 'The way out already exists. It will come from a direction you never imagined. Stay conscious of Him and watch the door appear.',
     },
+    {
+      arabic: 'وَإِن تَعُدُّوا۟ نِعْمَةَ ٱللَّهِ لَا تُحْصُوهَآ ۗ إِنَّ ٱللَّهَ لَغَفُورٌ رَّحِيمٌ',
+      english: 'And if you were to count the blessings of Allah, you could not enumerate them. Indeed, Allah is Forgiving and Merciful.',
+      french: 'Si vous comptiez les bienfaits d\'Allah, vous ne pourriez les dénombrer. Allah est certes Pardonneur et Miséricordieux.',
+      ref: 'An-Nahl 16:18',
+      reflection: 'Even in lack, there is more given to you than taken. Begin naming what remains — and find the list has no end.',
+    },
+    {
+      arabic: 'لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ',
+      english: 'If you are grateful, I will surely increase you.',
+      french: 'Si vous êtes reconnaissants, J\'augmenterai certes vos bienfaits.',
+      ref: 'Ibrahim 14:7',
+      reflection: 'Gratitude is not merely an emotion — it is a mechanism. Thankfulness opens the door to more provision.',
+    },
+    {
+      arabic: 'وَٱللَّهُ يَرْزُقُ مَن يَشَآءُ بِغَيْرِ حِسَابٍ',
+      english: 'And Allah provides for whom He wills without account.',
+      french: 'Allah accorde Ses dons sans compter à qui Il veut.',
+      ref: 'Al-Baqarah 2:212',
+      reflection: 'His provision knows no budget. When He decides to give, no arithmetic limits what arrives at your door.',
+    },
+    {
+      arabic: 'وَٱللَّهُ خَيْرُ ٱلرَّٰزِقِينَ',
+      english: 'And Allah is the best of providers.',
+      french: 'Et Allah est le meilleur des pourvoyeurs.',
+      ref: 'Al-Jumu\'ah 62:11',
+      reflection: 'You may have many sources of income — but only one Provider. When sources dry up, the Provider remains.',
+    },
+    {
+      arabic: 'أَمَّن يُجِيبُ ٱلْمُضْطَرَّ إِذَا دَعَاهُ وَيَكْشِفُ ٱلسُّوٓءَ',
+      english: 'Is it not He who responds to the desperate one when he calls upon Him and removes the harm?',
+      french: 'N\'est-ce pas Lui qui répond à l\'implorant quand il L\'appelle et dissipe le mal?',
+      ref: 'An-Naml 27:62',
+      reflection: 'Desperation is not weakness — it is the state in which Allah most reliably answers. Your need is your access to Him.',
+    },
+    {
+      arabic: 'وَكَأَيِّن مِّن دَآبَّةٍ لَّا تَحْمِلُ رِزْقَهَا ٱللَّهُ يَرْزُقُهَا وَإِيَّاكُمْ',
+      english: 'And how many a creature carries not its own provision — Allah provides for it and for you.',
+      french: 'Combien de créatures ne portent pas leurs propres provisions — c\'est Allah qui les nourrit, ainsi que vous.',
+      ref: 'Al-Ankabut 29:60',
+      reflection: 'The creatures that cannot plan, save, or worry are fed daily. How much more will He care for the one who turns to Him in trust?',
+    },
   ],
 
-  /* ──────────────── PHYSICAL PAIN ──────────────── */
+  /* ══════════════════════════════════════════
+     PHYSICAL PAIN — 12 verses
+  ══════════════════════════════════════════ */
   pain: [
     {
       arabic: 'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا',
       english: 'Allah does not burden a soul beyond that it can bear.',
       french: 'Allah n\'impose à aucune âme une charge supérieure à sa capacité.',
       ref: 'Al-Baqarah 2:286',
-      reflection: 'Your pain has been precisely calibrated. He knows your exact capacity and would not exceed it.',
+      reflection: 'Your pain has been precisely calibrated. He knows your exact capacity and would not exceed it by even a breath.',
     },
     {
       arabic: 'وَإِذَا مَرِضْتُ فَهُوَ يَشْفِينِ',
       english: 'And when I am ill, it is He who heals me.',
       french: 'Quand je suis malade, c\'est Lui qui me guérit.',
       ref: 'Ash-Shu\'ara 26:80',
-      reflection: 'Every doctor, every medicine, every moment of recovery — they are channels. The actual Healer is one.',
+      reflection: 'Every doctor, every medicine — they are channels. The actual Healer has only one name. Call upon Him directly.',
     },
     {
       arabic: 'إِنَّمَا يُوَفَّى ٱلصَّـٰبِرُونَ أَجْرَهُم بِغَيْرِ حِسَابٍ',
       english: 'Indeed, the patient will be given their reward without account.',
       french: 'Les endurants recevront leur récompense sans limite.',
       ref: 'Az-Zumar 39:10',
-      reflection: 'For every other deed a weight is measured. For patience in pain alone — no limit. The reward exceeds any calculation.',
-    },
-    {
-      arabic: 'وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّـٰبِرِينَ',
-      english: 'We will certainly test you with fear, hunger, loss of wealth, lives, and fruits — but give glad tidings to the patient.',
-      french: 'Nous vous éprouverons par la crainte, la faim, et la perte de biens — annonce une bonne nouvelle aux patients.',
-      ref: 'Al-Baqarah 2:155',
-      reflection: 'Notice: the glad tidings come to those who endure, not those who escape. You are in the middle of a promise.',
+      reflection: 'For every other deed a weight is measured. For patience in pain — no limit. The reward exceeds any calculation imaginable.',
     },
     {
       arabic: 'وَبَشِّرِ ٱلصَّـٰبِرِينَ ٱلَّذِينَ إِذَآ أَصَـٰبَتْهُم مُّصِيبَةٌ قَالُوٓا۟ إِنَّا لِلَّهِ وَإِنَّآ إِلَيْهِ رَٰجِعُونَ',
@@ -90,14 +129,65 @@ export const VERSES = {
     },
     {
       arabic: 'أَحَسِبَ ٱلنَّاسُ أَن يُتْرَكُوٓا۟ أَن يَقُولُوٓا۟ ءَامَنَّا وَهُمْ لَا يُفْتَنُونَ',
-      english: 'Do people think that they will be left because they say "We believe" and not be tested?',
-      french: 'Les hommes pensent-ils qu\'on les laissera dire: Nous croyons, sans les éprouver?',
+      english: 'Do people think they will be left alone saying "We believe" without being tested?',
+      french: 'Les gens pensent-ils qu\'on les laissera dire: Nous croyons, sans les éprouver?',
       ref: 'Al-Ankabut 29:2',
       reflection: 'Your pain is not a sign you were forgotten. It is a sign you were taken seriously enough to be tested.',
     },
+    {
+      arabic: 'مَا يُصِيبُ مِن مُّصِيبَةٍ إِلَّا بِإِذْنِ ٱللَّهِ ۗ وَمَن يُؤْمِنۢ بِٱللَّهِ يَهْدِ قَلْبَهُۥ',
+      english: 'No calamity strikes except by permission of Allah. And whoever believes in Allah — He guides their heart.',
+      french: 'Nulle calamité n\'arrive sans la permission d\'Allah. Celui qui croit en Allah, Il guide son cœur.',
+      ref: 'At-Taghabun 64:11',
+      reflection: 'Your illness did not slip past Allah\'s attention. It passed through His permission — and from that permission, guidance can grow.',
+    },
+    {
+      arabic: 'فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا',
+      english: 'For indeed, with every hardship will be ease — indeed, with every hardship will be ease.',
+      french: 'Car avec la difficulté vient la facilité — avec la difficulté vient la facilité.',
+      ref: 'Ash-Sharh 94:5–6',
+      reflection: 'He said it twice — not once. The ease is not a distant hope. It is already threaded through your current pain.',
+    },
+    {
+      arabic: 'وَنُنَزِّلُ مِنَ ٱلْقُرْءَانِ مَا هُوَ شِفَآءٌ وَرَحْمَةٌ لِّلْمُؤْمِنِينَ',
+      english: 'And We send down of the Quran that which is a healing and a mercy for the believers.',
+      french: 'Nous faisons descendre du Coran ce qui est une guérison et une miséricorde pour les croyants.',
+      ref: 'Al-Isra 17:82',
+      reflection: 'The words you are reading right now are medicinal. The Quran was sent down as healing — not just a book, but a cure.',
+    },
+    {
+      arabic: 'وَإِن يَمْسَسْكَ ٱللَّهُ بِضُرٍّ فَلَا كَاشِفَ لَهُۥٓ إِلَّا هُوَ',
+      english: 'And if Allah should touch you with adversity, there is no remover of it except Him.',
+      french: 'Si Allah t\'afflige d\'un mal, nul autre que Lui ne peut l\'enlever.',
+      ref: 'Al-An\'am 6:17',
+      reflection: 'There is exactly one being who can lift what you carry. This is not cause for despair — it is reason to go directly to the source.',
+    },
+    {
+      arabic: 'وَٱللَّهُ خَلَقَكُمْ وَمَا تَعْمَلُونَ',
+      english: 'And Allah created you and what you do.',
+      french: 'Allah vous a créés, vous et ce que vous faites.',
+      ref: 'As-Saffat 37:96',
+      reflection: 'Even the suffering body you inhabit was made by Him. He is not a stranger to your pain — He is its Knower and its Limit-setter.',
+    },
+    {
+      arabic: 'وَلَنَجْزِيَنَّ ٱلَّذِينَ صَبَرُوٓا۟ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ',
+      english: 'And We will surely give those who were patient their reward according to the best of what they used to do.',
+      french: 'Nous récompenserons les endurants selon le meilleur de ce qu\'ils faisaient.',
+      ref: 'An-Nahl 16:96',
+      reflection: 'According to the best — not the average. Allah grades your endurance at its finest moment and rewards accordingly.',
+    },
+    {
+      arabic: 'يُحِبُّهُمْ وَيُحِبُّونَهُۥٓ',
+      english: 'He loves them and they love Him.',
+      french: 'Il les aime et ils L\'aiment.',
+      ref: 'Al-Ma\'idah 5:54',
+      reflection: 'You are loved by the One who holds all power. A loved soul in pain is never abandoned — it is held closer than before.',
+    },
   ],
 
-  /* ──────────────── GRIEF & LOSS ──────────────── */
+  /* ══════════════════════════════════════════
+     GRIEF & LOSS — 12 verses
+  ══════════════════════════════════════════ */
   grief: [
     {
       arabic: 'إِنَّا لِلَّهِ وَإِنَّآ إِلَيْهِ رَٰجِعُونَ',
@@ -111,7 +201,7 @@ export const VERSES = {
       english: 'O tranquil soul — return to your Lord, well-pleased and pleasing to Him.',
       french: 'Ô toi, âme apaisée, retourne vers ton Seigneur, satisfaite et agréée.',
       ref: 'Al-Fajr 89:27–28',
-      reflection: 'The most beautiful end described in the Quran. Peace is not the absence of grief — it is a soul that has been through grief and returned home.',
+      reflection: 'The most beautiful ending described in the Quran. Peace is not the absence of grief — it is a soul that has been through grief and returned home.',
     },
     {
       arabic: 'أَلَآ إِنَّ أَوْلِيَآءَ ٱللَّهِ لَا خَوْفٌ عَلَيْهِمْ وَلَا هُمْ يَحْزَنُونَ',
@@ -121,11 +211,11 @@ export const VERSES = {
       reflection: 'Draw close to Allah in your grief. For those near to Him, even loss becomes a kind of peace.',
     },
     {
-      arabic: 'إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَـٰٓئِكَةُ أَلَّا تَخَافُوا۟ وَلَا تَحْزَنُوا۟',
-      english: 'Those who say "Our Lord is Allah" and remain steadfast — angels descend upon them: "Fear not, nor grieve."',
-      french: 'Ceux qui disent: Notre Seigneur est Allah et qui se maintiennent dans la droiture — les anges descendent sur eux: Ne craignez rien et ne vous affligez pas.',
-      ref: 'Fussilat 41:30',
-      reflection: 'The angels carry a specific message for those who hold firm in loss. You are not alone in this — you are accompanied.',
+      arabic: 'إِنَّمَآ أَشْكُوا۟ بَثِّى وَحُزْنِى إِلَى ٱللَّهِ',
+      english: 'I only complain of my suffering and my grief to Allah.',
+      french: 'Je ne me plains de ma détresse et de mon chagrin qu\'à Allah.',
+      ref: 'Yusuf 12:86',
+      reflection: 'These are the words of a Prophet in the depths of grief. Pour your sorrow out to Allah — He is the only one vast enough to hold it all.',
     },
     {
       arabic: 'وَلَا تَهِنُوا۟ وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ',
@@ -135,15 +225,59 @@ export const VERSES = {
       reflection: 'Grief touches every human soul — but it does not have to swallow you. Your faith is an elevation that grief cannot reach.',
     },
     {
-      arabic: 'إِنَّمَا أَشْكُوا۟ بَثِّى وَحُزْنِى إِلَى ٱللَّهِ',
-      english: 'I only complain of my suffering and my grief to Allah.',
-      french: 'Je ne me plains de ma détresse et de mon chagrin qu\'à Allah.',
-      ref: 'Yusuf 12:86',
-      reflection: 'These are the words of a Prophet in the depth of grief. Pour your sorrow out to Allah — He is the only one vast enough to hold it.',
+      arabic: 'إِنَّ ٱلَّذِينَ قَالُوا۟ رَبُّنَا ٱللَّهُ ثُمَّ ٱسْتَقَـٰمُوا۟ تَتَنَزَّلُ عَلَيْهِمُ ٱلْمَلَـٰٓئِكَةُ أَلَّا تَخَافُوا۟ وَلَا تَحْزَنُوا۟',
+      english: 'Those who say "Our Lord is Allah" and remain steadfast — angels descend upon them: "Fear not, nor grieve."',
+      french: 'Ceux qui disent: Notre Seigneur est Allah et qui se maintiennent dans la droiture — les anges descendent sur eux: Ne craignez rien et ne vous affligez pas.',
+      ref: 'Fussilat 41:30',
+      reflection: 'The angels carry a specific message for those who hold firm in loss. You are not alone — you are accompanied by unseen presences of mercy.',
+    },
+    {
+      arabic: 'وَٱللَّهُ يُحِبُّ ٱلصَّـٰبِرِينَ',
+      english: 'And Allah loves the patient.',
+      french: 'Allah aime les endurants.',
+      ref: 'Ali Imran 3:146',
+      reflection: 'In your mourning, if you hold on, you become someone Allah loves. Grief endured with faith is not suffering — it is a path to His love.',
+    },
+    {
+      arabic: 'وَلَا تَحْسَبَنَّ ٱلَّذِينَ قُتِلُوا۟ فِى سَبِيلِ ٱللَّهِ أَمْوَٰتًۢا ۚ بَلْ أَحْيَآءٌ عِندَ رَبِّهِمْ يُرْزَقُونَ',
+      english: 'And never think of those who have been killed in the cause of Allah as dead. Rather, they are alive with their Lord, being provided for.',
+      french: 'Ne crois pas que ceux qui ont été tués dans le sentier d\'Allah sont morts. Au contraire, ils sont vivants auprès de leur Seigneur.',
+      ref: 'Ali Imran 3:169',
+      reflection: 'Death is not an ending in the Quran — it is a transition. Those you mourn are not gone. They have arrived somewhere you have not yet reached.',
+    },
+    {
+      arabic: 'كُلُّ نَفْسٍ ذَآئِقَةُ ٱلْمَوْتِ',
+      english: 'Every soul will taste death.',
+      french: 'Toute âme goûtera la mort.',
+      ref: 'Ali Imran 3:185',
+      reflection: 'Grief reminds you that you are human and mortal. Every soul before you has faced this door. You are not alone in standing before it.',
+    },
+    {
+      arabic: 'فَصَبْرٌ جَمِيلٌ ۖ وَٱللَّهُ ٱلْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ',
+      english: 'So patience is most fitting. And Allah is the one sought for help against what you describe.',
+      french: 'La belle patience s\'impose. C\'est Allah qu\'on implore contre ce que vous décrivez.',
+      ref: 'Yusuf 12:18',
+      reflection: 'Beautiful patience — not just endurance, but dignified endurance. And the help to achieve it comes from Allah Himself.',
+    },
+    {
+      arabic: 'وَأَنَّ إِلَىٰ رَبِّكَ ٱلْمُنتَهَىٰ',
+      english: 'And that to your Lord is the finality.',
+      french: 'Et que vers ton Seigneur est la destination finale.',
+      ref: 'An-Najm 53:42',
+      reflection: 'Every road, every life, every grief — it all ends at the same destination. And that destination is in the hands of the Most Merciful.',
+    },
+    {
+      arabic: 'وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ وَنَقْصٍ مِّنَ ٱلْأَمْوَٰلِ وَٱلْأَنفُسِ وَٱلثَّمَرَٰتِ ۗ وَبَشِّرِ ٱلصَّـٰبِرِينَ',
+      english: 'And We will surely test you with some fear, hunger, and loss of wealth, lives and fruits — but give glad tidings to the patient.',
+      french: 'Nous vous éprouverons par la crainte, la faim, la perte de biens, de vies et de récoltes — annonce une bonne nouvelle aux patients.',
+      ref: 'Al-Baqarah 2:155',
+      reflection: 'Notice: the glad tidings come to those who endure, not those who escape. You are in the middle of a promise.',
     },
   ],
 
-  /* ──────────────── ANXIETY & FEAR ──────────────── */
+  /* ══════════════════════════════════════════
+     ANXIETY & FEAR — 12 verses
+  ══════════════════════════════════════════ */
   anxiety: [
     {
       arabic: 'حَسْبُنَا ٱللَّهُ وَنِعْمَ ٱلْوَكِيلُ',
@@ -178,18 +312,62 @@ export const VERSES = {
       english: 'My success is not but through Allah — upon Him I have relied and to Him I return.',
       french: 'Mon succès ne vient que d\'Allah; c\'est en Lui que je me confie et vers Lui je me tourne.',
       ref: 'Hud 11:88',
-      reflection: 'When anxiety tells you that you alone must figure this out — remember these words. Success was never yours to manufacture.',
+      reflection: 'When anxiety tells you that you alone must figure this out — remember these words. Success was never yours to manufacture alone.',
     },
     {
-      arabic: 'وَلَا تَحْزَنُوا۟ وَأَنتُمُ ٱلْأَعْلَوْنَ إِن كُنتُم مُّؤْمِنِينَ',
-      english: 'Do not grieve — you will be superior if you are true believers.',
-      french: 'Ne vous affligez pas, vous serez les plus élevés si vous êtes de vrais croyants.',
-      ref: 'Ali Imran 3:139',
-      reflection: 'Anxiety often whispers that the worst will happen. Faith answers: even if it does, I am held by something above all of it.',
+      arabic: 'سَيَجْعَلُ ٱللَّهُ بَعْدَ عُسْرٍ يُسْرًا',
+      english: 'Allah will bring about ease after hardship.',
+      french: 'Allah accordera après la difficulté la facilité.',
+      ref: 'At-Talaq 65:7',
+      reflection: 'This is not a hope — it is a declaration. Allah will bring ease. Not might, not perhaps. Will.',
+    },
+    {
+      arabic: 'وَلَا تَخَافُوا۟ وَلَا تَحْزَنُوا۟ وَأَبْشِرُوا۟ بِٱلْجَنَّةِ ٱلَّتِى كُنتُمْ تُوعَدُونَ',
+      english: 'Fear not, nor grieve — but receive good tidings of Paradise which you were promised.',
+      french: 'Ne craignez pas et ne vous affligez pas, mais réjouissez-vous de la bonne nouvelle du Paradis qui vous avait été promis.',
+      ref: 'Fussilat 41:30',
+      reflection: 'The angels bring the reminder that what awaits the patient believer is beyond all the fear of this world.',
+    },
+    {
+      arabic: 'إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ',
+      english: 'Indeed, Allah is with the patient.',
+      french: 'Certes, Allah est avec les patients.',
+      ref: 'Al-Baqarah 2:153',
+      reflection: 'Anxiety wants you to feel alone in uncertainty. But the patient one is never alone — Allah Himself accompanies them through it.',
+    },
+    {
+      arabic: 'وَإِذَا سَأَلَكَ عِبَادِى عَنِّى فَإِنِّى قَرِيبٌ ۖ أُجِيبُ دَعْوَةَ ٱلدَّاعِ إِذَا دَعَانِ',
+      english: 'When My servants ask about Me — indeed I am near. I respond to the one who calls when they call upon Me.',
+      french: 'Quand Mes serviteurs t\'interrogent sur Moi, Je suis tout près; Je réponds à l\'appel de celui qui Me prie.',
+      ref: 'Al-Baqarah 2:186',
+      reflection: 'Anxiety is distance from the present. Prayer closes that distance. He is near — right now, even in the middle of your fear.',
+    },
+    {
+      arabic: 'وَٱللَّهُ غَالِبٌ عَلَىٰٓ أَمْرِهِۦ وَلَـٰكِنَّ أَكْثَرَ ٱلنَّاسِ لَا يَعْلَمُونَ',
+      english: 'Allah is predominant over His affair, but most people do not know.',
+      french: 'Allah est souverain dans Ses affaires, mais la plupart des gens ne le savent pas.',
+      ref: 'Yusuf 12:21',
+      reflection: 'Whatever you are anxious about — it is already inside His sovereignty. The outcome is not up to chance. It is up to Him.',
+    },
+    {
+      arabic: 'لَّا تُدْرِكُهُ ٱلْأَبْصَـٰرُ وَهُوَ يُدْرِكُ ٱلْأَبْصَـٰرَ ۖ وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ',
+      english: 'Vision perceives Him not, but He perceives all vision; and He is the Subtle, the Acquainted.',
+      french: 'Les regards ne L\'atteignent pas, mais Il saisit tous les regards. Il est le Subtil, l\'Omniscient.',
+      ref: 'Al-An\'am 6:103',
+      reflection: 'He is Al-Latif — the Subtle. He moves through the cracks of your anxiety in ways too fine for you to see. He is already at work.',
+    },
+    {
+      arabic: 'رَبِّ ٱنصُرْنِى عَلَى ٱلْقَوْمِ ٱلْمُفْسِدِينَ',
+      english: 'My Lord, support me against the corrupting people.',
+      french: 'Seigneur, soutiens-moi contre ce peuple corrupteur.',
+      ref: 'Al-Ankabut 29:30',
+      reflection: 'Even the Prophets cried out to Allah in their moments of fear. Calling out in anxiety is not weakness — it is the prayer of the sincere.',
     },
   ],
 
-  /* ──────────────── LONELINESS ──────────────── */
+  /* ══════════════════════════════════════════
+     LONELINESS — 12 verses
+  ══════════════════════════════════════════ */
   loneliness: [
     {
       arabic: 'وَنَحْنُ أَقْرَبُ إِلَيْهِ مِنْ حَبْلِ ٱلْوَرِيدِ',
@@ -217,7 +395,7 @@ export const VERSES = {
       english: 'There is no private conversation of three but He is the fourth.',
       french: 'Nulle conversation secrète entre trois personnes sans qu\'Il soit leur quatrième.',
       ref: 'Al-Mujadila 58:7',
-      reflection: 'Every private moment you have ever had was witnessed by Someone who cares more about you than you know.',
+      reflection: 'Every private moment you have ever had was witnessed by Someone who cares more about you than anyone else ever could.',
     },
     {
       arabic: 'إِنَّ ٱللَّهَ مَعَ ٱلَّذِينَ ٱتَّقَوا۟ وَّٱلَّذِينَ هُم مُّحْسِنُونَ',
@@ -233,9 +411,53 @@ export const VERSES = {
       ref: 'Al-Alaq 96:14',
       reflection: 'You are seen. Every silent struggle, every night no one knew about — Allah saw it all. Your loneliness was always witnessed.',
     },
+    {
+      arabic: 'وَهُوَ ٱلَّذِى فِى ٱلسَّمَآءِ إِلَـٰهٌ وَفِى ٱلْأَرْضِ إِلَـٰهٌ',
+      english: 'And it is He who is God in the heaven and God on the earth.',
+      french: 'C\'est Lui qui est Dieu dans le ciel et Dieu sur la terre.',
+      ref: 'Az-Zukhruf 43:84',
+      reflection: 'There is no place where He is absent — no height, no depth, no corner of your isolation that is beyond His presence.',
+    },
+    {
+      arabic: 'أَلَيْسَ ٱللَّهُ بِكَافٍ عَبْدَهُۥ',
+      english: 'Is Allah not sufficient for His servant?',
+      french: 'Allah ne suffit-Il pas à Son serviteur?',
+      ref: 'Az-Zumar 39:36',
+      reflection: 'The question answers itself. When people leave, when rooms go silent — is He not enough? He is. He always has been.',
+    },
+    {
+      arabic: 'وَلَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ وَنَعْلَمُ مَا تُوَسْوِسُ بِهِۦ نَفْسُهُۥ',
+      english: 'And We have created man and We know what his soul whispers to him.',
+      french: 'Nous avons créé l\'homme et Nous savons ce que son âme lui souffle.',
+      ref: 'Qaf 50:16',
+      reflection: 'The loneliness you feel — the thoughts no one else hears — He knows every one of them. You have never been unknown to Him.',
+    },
+    {
+      arabic: 'فَٱذْكُرُونِىٓ أَذْكُرْكُمْ',
+      english: 'So remember Me and I will remember you.',
+      french: 'Souvenez-vous de Moi, Je me souviendrai de vous.',
+      ref: 'Al-Baqarah 2:152',
+      reflection: 'A mutual remembrance. When you feel forgotten, say His name — and know that in that instant, He is remembering you too.',
+    },
+    {
+      arabic: 'وَٱصْبِرْ نَفْسَكَ مَعَ ٱلَّذِينَ يَدْعُونَ رَبَّهُم بِٱلْغَدَوٰةِ وَٱلْعَشِىِّ',
+      english: 'And keep yourself patient with those who call upon their Lord morning and evening.',
+      french: 'Fais preuve de patience avec ceux qui invoquent leur Seigneur matin et soir.',
+      ref: 'Al-Kahf 18:28',
+      reflection: 'You are part of a community of hearts calling out to Allah across all times and places. You are never truly isolated in this turning toward Him.',
+    },
+    {
+      arabic: 'إِنَّ رَبَّكَ لَبِٱلْمِرْصَادِ',
+      english: 'Indeed, your Lord is in observation.',
+      french: 'Certes ton Seigneur est en observation.',
+      ref: 'Al-Fajr 89:14',
+      reflection: 'Not passive. Not distant. In active observation — watching over you at this very moment with perfect attention.',
+    },
   ],
 
-  /* ──────────────── HOPELESSNESS ──────────────── */
+  /* ══════════════════════════════════════════
+     HOPELESSNESS — 12 verses
+  ══════════════════════════════════════════ */
   hopeless: [
     {
       arabic: 'لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا',
@@ -259,11 +481,11 @@ export const VERSES = {
       reflection: 'His breath of relief can reach any situation — no matter how sealed it seems. Even Yusuf was pulled from the pit and the prison.',
     },
     {
-      arabic: 'إِنَّهُۥ لَا يَيْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ',
-      english: 'Indeed, none despairs of relief from Allah except the disbelieving people.',
-      french: 'Certes, seuls les mécréants désespèrent du souffle d\'Allah.',
-      ref: 'Yusuf 12:87',
-      reflection: 'Despair is not a natural state for the believer. It is a door that faith refuses to walk through.',
+      arabic: 'وَٱلضُّحَىٰ ۝ وَٱلَّيْلِ إِذَا سَجَىٰ ۝ مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ',
+      english: 'By the morning brightness and by the night when it is still — your Lord has not abandoned you, nor has He despised you.',
+      french: 'Par le matin resplendissant, par la nuit quand elle s\'étend — ton Seigneur ne t\'a pas abandonné et il ne te hait pas.',
+      ref: 'Ad-Duha 93:1–3',
+      reflection: 'This surah was revealed when it felt like revelation had stopped. The feeling of being abandoned is a feeling, not a fact.',
     },
     {
       arabic: 'عَسَىٰ رَبُّكُمْ أَن يَرْحَمَكُمْ',
@@ -273,15 +495,59 @@ export const VERSES = {
       reflection: 'Perhaps — a word that holds open the future. As long as there is breath, there is the possibility of mercy.',
     },
     {
-      arabic: 'وَٱلضُّحَىٰ ۝ وَٱلَّيْلِ إِذَا سَجَىٰ ۝ مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ',
-      english: 'By the morning brightness, and by the night when it is still — your Lord has not abandoned you, nor has He despised you.',
-      french: 'Par le matin resplendissant, par la nuit quand elle s\'étend — ton Seigneur ne t\'a pas abandonné et il ne te hait pas.',
-      ref: 'Ad-Duha 93:1–3',
-      reflection: 'This surah was revealed in a period of silence when revelation had paused. The feeling of being abandoned is a feeling, not a fact.',
+      arabic: 'إِنَّهُۥ لَا يَيْـَٔسُ مِن رَّوْحِ ٱللَّهِ إِلَّا ٱلْقَوْمُ ٱلْكَـٰفِرُونَ',
+      english: 'Indeed, none despairs of relief from Allah except the disbelieving people.',
+      french: 'Certes, seuls les mécréants désespèrent du souffle d\'Allah.',
+      ref: 'Yusuf 12:87',
+      reflection: 'Despair is not a natural state for the believer. It is a door that faith refuses to walk through.',
+    },
+    {
+      arabic: 'وَلَا تُلْقُوا۟ بِأَيْدِيكُمْ إِلَى ٱلتَّهْلُكَةِ',
+      english: 'And do not throw yourselves into destruction.',
+      french: 'Ne vous précipitez pas de vos propres mains dans la perdition.',
+      ref: 'Al-Baqarah 2:195',
+      reflection: 'Even in the darkest moment, Allah calls you back — away from the edge. Your life is a trust. He has not given up on you. Neither should you.',
+    },
+    {
+      arabic: 'وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ',
+      english: 'And your Lord will give to you, and you will be satisfied.',
+      french: 'Ton Seigneur te donnera, et tu seras satisfait.',
+      ref: 'Ad-Duha 93:5',
+      reflection: 'Not just tolerated — satisfied. This is the destination Allah has personally promised. Hold on until you arrive there.',
+    },
+    {
+      arabic: 'أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ',
+      english: 'Did We not expand your chest for you?',
+      french: 'N\'avons-Nous pas dilaté ta poitrine?',
+      ref: 'Ash-Sharh 94:1',
+      reflection: 'Hopelessness feels like a chest too tight to breathe. But Allah is in the business of expanding chests. He did it before. He can do it again.',
+    },
+    {
+      arabic: 'وَهُوَ ٱلَّذِى يَقْبَلُ ٱلتَّوْبَةَ عَنْ عِبَادِهِۦ وَيَعْفُوا۟ عَنِ ٱلسَّيِّـَٔاتِ',
+      english: 'And He is the One who accepts repentance from His servants and pardons misdeeds.',
+      french: 'C\'est Lui qui accepte le repentir de Ses serviteurs et pardonne les mauvaises actions.',
+      ref: 'Ash-Shura 42:25',
+      reflection: 'He accepts repentance. He pardons misdeeds. He knows everything you have done — and He is still reaching out to you.',
+    },
+    {
+      arabic: 'وَأَن لَّيْسَ لِلْإِنسَـٰنِ إِلَّا مَا سَعَىٰ',
+      english: 'And that there is not for man except that for which he strives.',
+      french: 'L\'homme n\'obtient que ce qu\'il s\'est efforcé d\'acquérir.',
+      ref: 'An-Najm 53:39',
+      reflection: 'Hopelessness says nothing you do matters. The Quran answers: everything you strive for is credited to you — nothing is wasted.',
+    },
+    {
+      arabic: 'وَإِنِّى لَغَفَّارٌ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَـٰلِحًا ثُمَّ ٱهْتَدَىٰ',
+      english: 'And indeed, I am the Perpetual Forgiver for whoever repents and believes and does righteousness and then continues in guidance.',
+      french: 'Je suis très Pardonneur envers celui qui se repent, croit et accomplit de bonnes œuvres puis se maintient dans la bonne direction.',
+      ref: 'Ta-Ha 20:82',
+      reflection: 'Perpetual Forgiver — not occasional, not conditional on perfection. He forgives again and again, for the one who sincerely keeps returning.',
     },
   ],
 
-  /* ──────────────── ANGER ──────────────── */
+  /* ══════════════════════════════════════════
+     ANGER — 12 verses
+  ══════════════════════════════════════════ */
   anger: [
     {
       arabic: 'وَٱلْكَـٰظِمِينَ ٱلْغَيْظَ وَٱلْعَافِينَ عَنِ ٱلنَّاسِ ۗ وَٱللَّهُ يُحِبُّ ٱلْمُحْسِنِينَ',
@@ -319,15 +585,59 @@ export const VERSES = {
       reflection: 'Peace — not argument, not retaliation. One word. It ends the fire without feeding it.',
     },
     {
-      arabic: 'وَلْيَعْفُوا۟ وَلْيَصْفَحُوٓا۟ ۗ أَلَا تُحِبُّونَ أَن يَغْفِرَ ٱللَّهُ لَكُمْ ۗ وَٱللَّهُ غَفُورٌ رَّحِيمٌ',
-      english: 'Let them pardon and overlook. Would you not like that Allah should forgive you? And Allah is Forgiving and Merciful.',
-      french: 'Qu\'ils pardonnent et passent l\'éponge. N\'aimez-vous pas qu\'Allah vous pardonne? Allah est Pardonneur et Miséricordieux.',
+      arabic: 'وَلْيَعْفُوا۟ وَلْيَصْفَحُوٓا۟ ۗ أَلَا تُحِبُّونَ أَن يَغْفِرَ ٱللَّهُ لَكُمْ',
+      english: 'Let them pardon and overlook. Would you not like that Allah should forgive you?',
+      french: 'Qu\'ils pardonnent et passent l\'éponge. N\'aimez-vous pas qu\'Allah vous pardonne?',
       ref: 'An-Nur 24:22',
-      reflection: 'Every time you choose to forgive, you are invoking the same quality in your Creator toward yourself.',
+      reflection: 'Every time you choose to forgive, you invoke the same quality in your Creator toward yourself.',
+    },
+    {
+      arabic: 'وَأَن تَعْفُوٓا۟ أَقْرَبُ لِلتَّقْوَىٰ',
+      english: 'And to forgive is nearer to righteousness.',
+      french: 'Et le pardon est plus proche de la piété.',
+      ref: 'Al-Baqarah 2:237',
+      reflection: 'Every step toward forgiveness is a step toward Allah. Letting go is not losing — it is rising.',
+    },
+    {
+      arabic: 'فَمَنْ عَفَا وَأَصْلَحَ فَأَجْرُهُۥ عَلَى ٱللَّهِ',
+      english: 'But whoever pardons and makes reconciliation — his reward is with Allah.',
+      french: 'Mais celui qui pardonne et se réconcilie — sa récompense incombe à Allah.',
+      ref: 'Ash-Shura 42:40',
+      reflection: 'The reward for pardoning is held personally by Allah. That is no small thing.',
+    },
+    {
+      arabic: 'وَٱلَّذِينَ يَجْتَنِبُونَ كَبَـٰٓئِرَ ٱلْإِثْمِ وَٱلْفَوَٰحِشَ وَإِذَا مَا غَضِبُوا۟ هُمْ يَغْفِرُونَ',
+      english: 'And those who avoid major sins, and when they are angry, they forgive.',
+      french: 'Ceux qui évitent les grands péchés et les turpitudes et qui, quand ils sont en colère, pardonnent.',
+      ref: 'Ash-Shura 42:37',
+      reflection: 'Forgiving while angry is listed alongside avoiding major sins. It is that significant. That noble. That rewarded.',
+    },
+    {
+      arabic: 'وَٱللَّهُ يُحِبُّ ٱلْمُحْسِنِينَ',
+      english: 'And Allah loves the doers of good.',
+      french: 'Allah aime les bienfaisants.',
+      ref: 'Ali Imran 3:134',
+      reflection: 'Choosing kindness in the face of anger is one of the highest acts of goodness. It earns you the love of the Most Loving.',
+    },
+    {
+      arabic: 'وَلَا يَجْرِمَنَّكُمْ شَنَـَٔانُ قَوْمٍ عَلَىٰٓ أَلَّا تَعْدِلُوا۟ ۚ ٱعْدِلُوا۟ هُوَ أَقْرَبُ لِلتَّقْوَىٰ',
+      english: 'And let not the hatred of a people lead you away from justice. Be just — that is nearer to righteousness.',
+      french: 'Que la haine d\'un peuple ne vous incite pas à l\'injustice. Soyez équitables, c\'est ce qui se rapproche le plus de la piété.',
+      ref: 'Al-Ma\'idah 5:8',
+      reflection: 'Even in anger, justice is still required. The command to be fair does not lift when you feel wronged.',
+    },
+    {
+      arabic: 'وَلَا تَسْتَوِى ٱلْحَسَنَةُ وَلَا ٱلسَّيِّئَةُ ۚ ٱدْفَعْ بِٱلَّتِى هِىَ أَحْسَنُ',
+      english: 'Good and evil are not equal. Repel evil by that which is better.',
+      french: 'Le bien et le mal ne sont pas pareils. Repousse le mal par ce qui est meilleur.',
+      ref: 'Fussilat 41:34',
+      reflection: 'Good and evil are not equal — and you have the power to choose which you add to the world right now, in this moment.',
     },
   ],
 
-  /* ──────────────── INJUSTICE ──────────────── */
+  /* ══════════════════════════════════════════
+     INJUSTICE — 12 verses
+  ══════════════════════════════════════════ */
   injustice: [
     {
       arabic: 'إِنَّ ٱللَّهَ لَا يَظْلِمُ مِثْقَالَ ذَرَّةٍ',
@@ -355,7 +665,7 @@ export const VERSES = {
       english: 'Indeed, your Lord is in observation.',
       french: 'Certes ton Seigneur est en observation.',
       ref: 'Al-Fajr 89:14',
-      reflection: 'He is watching. Not passively — in observation. Every act of injustice has a witness who cannot be silenced or bribed.',
+      reflection: 'He is watching. Not passively — in active observation. Every act of injustice has a witness who cannot be silenced or bribed.',
     },
     {
       arabic: 'وَٱللَّهُ يَحْكُمُ لَا مُعَقِّبَ لِحُكْمِهِۦ',
@@ -369,18 +679,62 @@ export const VERSES = {
       english: 'Indeed, Allah commands justice and good conduct.',
       french: 'Allah commande l\'équité et la bienfaisance.',
       ref: 'An-Nahl 16:90',
-      reflection: 'Justice is not your burden to manufacture alone. It is His command — and He is the ultimate authority behind it.',
+      reflection: 'Justice is not yours to manufacture alone. It is His command — and He is the ultimate authority backing it.',
+    },
+    {
+      arabic: 'يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوا۟ كُونُوا۟ قَوَّٰمِينَ بِٱلْقِسْطِ شُهَدَآءَ لِلَّهِ',
+      english: 'O you who believe — be persistently standing firm in justice, witnesses for Allah.',
+      french: 'Ô vous qui croyez! Soyez des défenseurs rigoureux de la justice, témoins devant Allah.',
+      ref: 'An-Nisa 4:135',
+      reflection: 'Allah does not only see injustice — He commands you to stand against it. Your voice for justice is an act of worship.',
+    },
+    {
+      arabic: 'إِنَّا لَنَنصُرُ رُسُلَنَا وَٱلَّذِينَ ءَامَنُوا۟ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا وَيَوْمَ يَقُومُ ٱلْأَشْهَـٰدُ',
+      english: 'Indeed, We will support Our messengers and those who believe in worldly life and on the Day the witnesses will stand.',
+      french: 'Nous porterons secours à Nos messagers et aux croyants dans la vie de ce monde, et au Jour où se présenteront les témoins.',
+      ref: 'Ghafir 40:51',
+      reflection: 'This is a divine guarantee. The oppressed believer will be supported — in this life and on the Day that settles all accounts.',
+    },
+    {
+      arabic: 'وَلَا يَحِيقُ ٱلْمَكْرُ ٱلسَّيِّئُ إِلَّا بِأَهْلِهِۦ',
+      english: 'And the evil plot does not encompass except its own people.',
+      french: 'Le mauvais complot ne nuit qu\'à ses auteurs.',
+      ref: 'Fatir 35:43',
+      reflection: 'What is designed to harm you will ultimately return to its source. Every trap set in injustice collapses inward on the one who built it.',
+    },
+    {
+      arabic: 'وَجَزَٰٓؤُا۟ سَيِّئَةٍ سَيِّئَةٌ مِّثْلُهَا ۖ فَمَنْ عَفَا وَأَصْلَحَ فَأَجْرُهُۥ عَلَى ٱللَّهِ',
+      english: 'The recompense of an evil act is one like it, but whoever pardons and makes reconciliation — his reward is with Allah.',
+      french: 'La rétribution d\'un mal est un mal équivalent. Mais celui qui pardonne et se réconcilie, sa récompense incombe à Allah.',
+      ref: 'Ash-Shura 42:40',
+      reflection: 'You are permitted to seek equal justice. But the one who forgives beyond what is required earns a reward only Allah holds.',
+    },
+    {
+      arabic: 'وَلَا تَحْسَبَنَّ ٱللَّهَ غَـٰفِلًا عَمَّا يَعْمَلُ ٱلظَّـٰلِمُونَ ۚ إِنَّمَا يُؤَخِّرُهُمْ لِيَوْمٍ تَشْخَصُ فِيهِ ٱلْأَبْصَـٰرُ',
+      english: 'Never think Allah is unaware of what the wrongdoers do. He only delays them for a Day when eyes will stare in horror.',
+      french: 'Ne pense pas qu\'Allah est inattentif à ce que font les injustes. Il leur accorde un délai jusqu\'au Jour où les regards seront figés d\'horreur.',
+      ref: 'Ibrahim 14:42',
+      reflection: 'He is not ignoring it. He is recording it — every atom of it — for a reckoning that will leave no question unanswered.',
+    },
+    {
+      arabic: 'وَٱللَّهُ عَزِيزٌ ذُو ٱنتِقَامٍ',
+      english: 'And Allah is Exalted in Might, Owner of Retribution.',
+      french: 'Allah est Puissant, détenteur du droit à la vengeance.',
+      ref: 'Ali Imran 3:4',
+      reflection: 'He is not powerless before injustice. He is All-Powerful — and He is Owner of Retribution. Justice is His attribute, not an afterthought.',
     },
   ],
 
-  /* ──────────────── HEARTBREAK ──────────────── */
+  /* ══════════════════════════════════════════
+     HEARTBREAK — 12 verses
+  ══════════════════════════════════════════ */
   heartbreak: [
     {
       arabic: 'أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ',
       english: 'Verily, in the remembrance of Allah do hearts find rest.',
       french: 'C\'est par l\'évocation d\'Allah que les cœurs se tranquillisent.',
       ref: 'Ar-Ra\'d 13:28',
-      reflection: 'A broken heart is not an empty heart. It is one with space made — space that was always meant for Him.',
+      reflection: 'A broken heart is not an empty heart. It is one with space now made — space that was always meant for Him.',
     },
     {
       arabic: 'عَسَىٰٓ أَن تَكْرَهُوا۟ شَيْـًٔا وَهُوَ خَيْرٌ لَّكُمْ',
@@ -411,15 +765,59 @@ export const VERSES = {
       reflection: 'He sees the full picture while you see only the wound. Trust the perspective of the One who sees the end from the beginning.',
     },
     {
-      arabic: 'وَعَسَىٰٓ أَن تُحِبُّوا۟ شَيْـًٔا وَهُوَ شَرٌّ لَّكُمْ ۗ وَٱللَّهُ يَعْلَمُ وَأَنتُمْ لَا تَعْلَمُونَ',
-      english: 'Perhaps you love something while it is bad for you. Allah knows, while you do not know.',
-      french: 'Peut-être aimez-vous une chose alors qu\'elle vous est néfaste. Allah sait et vous ne savez pas.',
+      arabic: 'وَعَسَىٰٓ أَن تُحِبُّوا۟ شَيْـًٔا وَهُوَ شَرٌّ لَّكُمْ',
+      english: 'Perhaps you love something while it is bad for you.',
+      french: 'Peut-être aimez-vous une chose alors qu\'elle vous est néfaste.',
       ref: 'Al-Baqarah 2:216',
       reflection: 'Love can blind us to what is harmful. What felt like losing everything may have been Allah protecting you from something worse.',
     },
+    {
+      arabic: 'وَٱللَّهُ لَطِيفٌ بِعِبَادِهِ',
+      english: 'And Allah is Subtle with His servants.',
+      french: 'Allah est plein de douceur envers Ses serviteurs.',
+      ref: 'Ash-Shura 42:19',
+      reflection: 'Al-Latif — the Subtle. He works in ways invisible to you. Your healing is already in motion, even when you cannot see it.',
+    },
+    {
+      arabic: 'إِنَّ ٱللَّهَ لَا يُضِيعُ أَجْرَ ٱلْمُحْسِنِينَ',
+      english: 'Indeed, Allah does not allow to be lost the reward of those who do good.',
+      french: 'Allah ne laisse pas perdre la récompense des bienfaisants.',
+      ref: 'Hud 11:115',
+      reflection: 'Every act of love you gave — every sacrifice, every kindness — none of it is lost. Allah holds the reward even when the recipient is gone.',
+    },
+    {
+      arabic: 'وَٱصْبِرْ وَمَا صَبْرُكَ إِلَّا بِٱللَّهِ ۚ وَلَا تَحْزَنْ عَلَيْهِمْ',
+      english: 'And be patient, and your patience is only through Allah. And do not grieve over them.',
+      french: 'Sois patient — et ta patience ne vient que d\'Allah. Ne te chagrine pas à cause d\'eux.',
+      ref: 'An-Nahl 16:127',
+      reflection: 'The patience to heal is itself given by Allah. You do not have to manufacture it. Ask for it — He provides even the strength to recover.',
+    },
+    {
+      arabic: 'سَيَجْعَلُ ٱللَّهُ بَعْدَ عُسْرٍ يُسْرًا',
+      english: 'Allah will bring about ease after hardship.',
+      french: 'Allah accordera, après la difficulté, la facilité.',
+      ref: 'At-Talaq 65:7',
+      reflection: 'After the heartbreak, ease will come. Not maybe — will. This is a divine appointment you are moving toward.',
+    },
+    {
+      arabic: 'وَلَا تَيْـَٔسُوا۟ مِن رَّوْحِ ٱللَّهِ',
+      english: 'And do not despair of the Spirit of Allah.',
+      french: 'Et ne désespérez pas du souffle d\'Allah.',
+      ref: 'Yusuf 12:87',
+      reflection: 'Even Yusuf, thrown into a well by the people who should have loved him most, was not abandoned. Neither are you.',
+    },
+    {
+      arabic: 'وَلَقَدْ عَلِمْنَا ٱلْمُسْتَقْدِمِينَ مِنكُمْ وَلَقَدْ عَلِمْنَا ٱلْمُسْتَـَٔخِرِينَ',
+      english: 'And We have already known the preceding generations among you, and We have already known the later ones.',
+      french: 'Nous connaissons ceux d\'entre vous qui sont passés et Nous connaissons aussi ceux qui viendront.',
+      ref: 'Al-Hijr 15:24',
+      reflection: 'The person you lost — He knew them. He knows you. Every soul, every story, is held in His complete knowledge. Nothing is accidental.',
+    },
   ],
 
-  /* ──────────────── STRESS & BURDEN ──────────────── */
+  /* ══════════════════════════════════════════
+     STRESS & BURDEN — 12 verses
+  ══════════════════════════════════════════ */
   stress: [
     {
       arabic: 'أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ ۝ وَوَضَعْنَا عَنكَ وِزْرَكَ',
@@ -440,7 +838,7 @@ export const VERSES = {
       english: 'So remember Me and I will remember you.',
       french: 'Souvenez-vous de Moi, Je me souviendrai de vous.',
       ref: 'Al-Baqarah 2:152',
-      reflection: 'A mutual remembrance. When you feel forgotten under the weight of life — say His name, and know you are being remembered in return.',
+      reflection: 'When you feel forgotten under the weight of life — say His name, and know that in that instant, He is remembering you in return.',
     },
     {
       arabic: 'إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا',
@@ -463,9 +861,53 @@ export const VERSES = {
       ref: 'Al-Baqarah 2:45',
       reflection: 'Two tools given for every difficulty — patience and prayer. Used together, they form an unbreakable combination.',
     },
+    {
+      arabic: 'لَا يُكَلِّفُ ٱللَّهُ نَفْسًا إِلَّا وُسْعَهَا',
+      english: 'Allah does not burden a soul beyond that it can bear.',
+      french: 'Allah n\'impose à aucune âme une charge supérieure à sa capacité.',
+      ref: 'Al-Baqarah 2:286',
+      reflection: 'The fact that you are still standing is evidence: you can bear this. He measured the weight to your exact capacity.',
+    },
+    {
+      arabic: 'وَٱللَّهُ يُحِبُّ ٱلصَّـٰبِرِينَ',
+      english: 'And Allah loves the patient.',
+      french: 'Allah aime les endurants.',
+      ref: 'Ali Imran 3:146',
+      reflection: 'Enduring stress without losing faith is an act of love — and it is met with love from the Most Loving.',
+    },
+    {
+      arabic: 'سَيَجْعَلُ ٱللَّهُ بَعْدَ عُسْرٍ يُسْرًا',
+      english: 'Allah will bring about ease after hardship.',
+      french: 'Allah accordera après la difficulté la facilité.',
+      ref: 'At-Talaq 65:7',
+      reflection: 'After the stress — ease. This is not wishful thinking. It is a divine schedule.',
+    },
+    {
+      arabic: 'وَٱللَّهُ لَطِيفٌ بِعِبَادِهِ يَرْزُقُ مَن يَشَآءُ ۖ وَهُوَ ٱلْقَوِىُّ ٱلْعَزِيزُ',
+      english: 'And Allah is Subtle with His servants; He provides for whom He wills. And He is the Powerful, the Exalted in Might.',
+      french: 'Allah est plein de douceur envers Ses serviteurs, Il accorde Ses dons à qui Il veut. Il est le Fort, le Puissant.',
+      ref: 'Ash-Shura 42:19',
+      reflection: 'The One watching your struggle is Powerful enough to change it and Subtle enough to do so in ways you would never expect.',
+    },
+    {
+      arabic: 'وَلَنَبْلُوَنَّكُم بِشَىْءٍ مِّنَ ٱلْخَوْفِ وَٱلْجُوعِ',
+      english: 'And We will surely test you with something of fear and hunger.',
+      french: 'Nous vous éprouverons certainement par quelque chose de crainte et de faim.',
+      ref: 'Al-Baqarah 2:155',
+      reflection: 'The test was always promised. You are not going through something unexpected — you are going through something anticipated and survivable.',
+    },
+    {
+      arabic: 'وَهُوَ ٱللَّطِيفُ ٱلْخَبِيرُ',
+      english: 'And He is the Subtle, the Acquainted.',
+      french: 'Il est le Subtil, l\'Omniscient.',
+      ref: 'Al-Mulk 67:14',
+      reflection: 'Al-Latif knows the finest details of your stress — the parts you cannot even articulate. He is moving in the details even now.',
+    },
   ],
 
-  /* ──────────────── SEEKING GUIDANCE ──────────────── */
+  /* ══════════════════════════════════════════
+     SEEKING GUIDANCE — 12 verses
+  ══════════════════════════════════════════ */
   guidance: [
     {
       arabic: 'ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ',
@@ -482,13 +924,6 @@ export const VERSES = {
       reflection: 'Guidance is earned through sincere effort. The one who truly searches — Allah guarantees He will be found.',
     },
     {
-      arabic: 'إِنَّ ٱللَّهَ يَهْدِى مَن يَشَآءُ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ',
-      english: 'Indeed, Allah guides whom He wills to a straight path.',
-      french: 'Allah guide qui Il veut vers la voie droite.',
-      ref: 'Al-Baqarah 2:213',
-      reflection: 'Guidance is His gift to give. Ask for it sincerely and He gives what He wills to those who truly want it.',
-    },
-    {
       arabic: 'ذَٰلِكَ ٱلْكِتَـٰبُ لَا رَيْبَ ۛ فِيهِ ۛ هُدًى لِّلْمُتَّقِينَ',
       english: 'This is the Book — there is no doubt about it — a guidance for those who are mindful.',
       french: 'C\'est le Livre — sans nul doute — un guide pour les pieux.',
@@ -503,19 +938,70 @@ export const VERSES = {
       reflection: 'The signs are already there — in the universe and inside your own body. You are being shown, even now.',
     },
     {
-      arabic: 'قُلْ إِنَّ هُدَى ٱللَّهِ هُوَ ٱلْهُدَىٰ',
-      english: 'Say: Indeed, the guidance of Allah is the only true guidance.',
-      french: 'Dis: La guidance d\'Allah est la seule vraie guidance.',
-      ref: 'Al-Baqarah 2:120',
-      reflection: 'Every other direction is an opinion. His guidance is the only one built on complete knowledge of where you are going and where you need to arrive.',
+      arabic: 'وَمَن يَعْتَصِم بِٱللَّهِ فَقَدْ هُدِىَ إِلَىٰ صِرَٰطٍ مُّسْتَقِيمٍ',
+      english: 'And whoever holds firmly to Allah has been guided to a straight path.',
+      french: 'Celui qui s\'accroche à Allah est guidé vers la voie droite.',
+      ref: 'Ali Imran 3:101',
+      reflection: 'Holding on to Allah — even without all the answers — is itself a form of guidance. The holding is already the path.',
+    },
+    {
+      arabic: 'وَقُل رَّبِّ أَدْخِلْنِى مُدْخَلَ صِدْقٍ وَأَخْرِجْنِى مُخْرَجَ صِدْقٍ',
+      english: 'And say: My Lord, cause me to enter a sound entrance and to exit a sound exit.',
+      french: 'Dis: Seigneur, fais-moi entrer d\'une entrée sincère et sortir d\'une sortie sincère.',
+      ref: 'Al-Isra 17:80',
+      reflection: 'A prayer for integrity in every beginning and every ending. Ask Allah to make every door you pass through be the right one.',
+    },
+    {
+      arabic: 'يَهْدِى بِهِ ٱللَّهُ مَنِ ٱتَّبَعَ رِضْوَٰنَهُۥ سُبُلَ ٱلسَّلَـٰمِ',
+      english: 'By which Allah guides those who pursue His pleasure to the ways of peace.',
+      french: 'Par lequel Allah guide vers les voies de la paix ceux qui cherchent Son agrément.',
+      ref: 'Al-Ma\'idah 5:16',
+      reflection: 'The destination of guidance is peace. If you are seeking Allah\'s pleasure, you are already on a path that leads there.',
+    },
+    {
+      arabic: 'إِنَّ هَـٰذَا ٱلْقُرْءَانَ يَهْدِى لِلَّتِى هِىَ أَقْوَمُ',
+      english: 'Indeed, this Quran guides to that which is most suitable.',
+      french: 'Ce Coran guide vers ce qui est le plus droit.',
+      ref: 'Al-Isra 17:9',
+      reflection: 'Most suitable — not just any path, but the most fitting one for your specific life. The Quran was designed to lead you precisely.',
+    },
+    {
+      arabic: 'وَإِن تُطِيعُوهُ تَهْتَدُوا۟',
+      english: 'And if you obey Him, you will be guided.',
+      french: 'Si vous lui obéissez, vous serez guidés.',
+      ref: 'An-Nur 24:54',
+      reflection: 'Guidance is not a mystery — it comes through obedience. The act of following opens the road ahead.',
+    },
+    {
+      arabic: 'رَبَّنَآ ءَاتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا',
+      english: 'Our Lord, grant us from Yourself mercy and prepare for us from our affair right guidance.',
+      french: 'Seigneur, accorde-nous de Ta part une miséricorde et assure-nous la rectitude dans nos affaires.',
+      ref: 'Al-Kahf 18:10',
+      reflection: 'This is the prayer of the People of the Cave — those who left everything to find the right path. It was answered. So will yours.',
+    },
+    {
+      arabic: 'وَقُل رَّبِّ زِدْنِى عِلْمًا',
+      english: 'And say: My Lord, increase me in knowledge.',
+      french: 'Dis: Seigneur, augmente mon savoir.',
+      ref: 'Ta-Ha 20:114',
+      reflection: 'The answer to confusion is not less thinking — it is more knowledge sought from the right source. Ask Allah to expand your understanding.',
+    },
+    {
+      arabic: 'ٱللَّهُ وَلِىُّ ٱلَّذِينَ ءَامَنُوا۟ يُخْرِجُهُم مِّنَ ٱلظُّلُمَـٰتِ إِلَى ٱلنُّورِ',
+      english: 'Allah is the ally of those who believe. He brings them out from darknesses into the light.',
+      french: 'Allah est le Protecteur de ceux qui croient. Il les fait sortir des ténèbres vers la lumière.',
+      ref: 'Al-Baqarah 2:257',
+      reflection: 'From darkness into light — this is the movement Allah makes for those who believe. You are already in motion toward the light.',
     },
   ],
 
-  /* ──────────────── SHAME & GUILT ──────────────── */
+  /* ══════════════════════════════════════════
+     SHAME & GUILT — 12 verses
+  ══════════════════════════════════════════ */
   shame: [
     {
       arabic: 'قُلْ يَـٰعِبَادِىَ ٱلَّذِينَ أَسْرَفُوا۟ عَلَىٰٓ أَنفُسِهِمْ لَا تَقْنَطُوا۟ مِن رَّحْمَةِ ٱللَّهِ ۚ إِنَّ ٱللَّهَ يَغْفِرُ ٱلذُّنُوبَ جَمِيعًا',
-      english: 'Say: O My servants who have exceeded against themselves — do not despair of the mercy of Allah. Indeed, Allah forgives all sins.',
+      english: 'O My servants who have exceeded against themselves — do not despair of the mercy of Allah. Indeed, Allah forgives all sins.',
       french: 'Ô Mes serviteurs qui ont péché — ne désespérez pas de la miséricorde d\'Allah. En vérité, Allah pardonne tous les péchés.',
       ref: 'Az-Zumar 39:53',
       reflection: 'All sins. Not most. Not some. All. Return to Him with whatever you carry and watch it dissolve in His mercy.',
@@ -535,13 +1021,6 @@ export const VERSES = {
       reflection: 'He does not merely accept repentance — He loves the one who returns. Your turning back is an act of love, met with love.',
     },
     {
-      arabic: 'وَٱسْتَغْفِرُوا۟ رَبَّكُمْ ثُمَّ تُوبُوٓا۟ إِلَيْهِ',
-      english: 'And seek forgiveness of your Lord and turn to Him in repentance.',
-      french: 'Demandez pardon à votre Seigneur, puis repentez-vous vers Lui.',
-      ref: 'Hud 11:3',
-      reflection: 'Two steps: ask — then turn. The asking without the turning is incomplete. The turning is the act of truly beginning again.',
-    },
-    {
       arabic: 'رَبَّنَا ظَلَمْنَآ أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ ٱلْخَـٰسِرِينَ',
       english: 'Our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will surely be among the losers.',
       french: 'Notre Seigneur, nous avons fait du tort à nos âmes; si Tu ne nous pardonnes pas et ne nous fais pas miséricorde, nous serons parmi les perdants.',
@@ -555,9 +1034,60 @@ export const VERSES = {
       ref: 'An-Nisa 4:110',
       reflection: 'The formula is simple and always open: do wrong, acknowledge it, seek Him. He is already waiting with forgiveness.',
     },
+    {
+      arabic: 'وَإِنِّى لَغَفَّارٌ لِّمَن تَابَ وَءَامَنَ وَعَمِلَ صَـٰلِحًا ثُمَّ ٱهْتَدَىٰ',
+      english: 'And indeed, I am the Perpetual Forgiver for whoever repents and believes and does righteousness and then continues in guidance.',
+      french: 'Je suis très Pardonneur envers celui qui se repent, croit et accomplit de bonnes œuvres puis se maintient dans la bonne direction.',
+      ref: 'Ta-Ha 20:82',
+      reflection: 'Perpetual Forgiver — not occasional. He forgives again and again, for the one who sincerely keeps returning.',
+    },
+    {
+      arabic: 'غَافِرِ ٱلذَّنۢبِ وَقَابِلِ ٱلتَّوْبِ شَدِيدِ ٱلْعِقَابِ ذِى ٱلطَّوْلِ',
+      english: 'Forgiver of sin, Accepter of repentance, severe in punishment, Owner of abundance.',
+      french: 'Pardonneur du péché, Accepteur du repentir, Sévère en punition, Plein de largesse.',
+      ref: 'Ghafir 40:3',
+      reflection: 'He is named in the Quran itself as the Forgiver of sin. It is not an afterthought. It is a primary attribute of who He is.',
+    },
+    {
+      arabic: 'وَٱعْفُ عَنَّا وَٱغْفِرْ لَنَا وَٱرْحَمْنَآ ۚ أَنتَ مَوْلَىٰنَا',
+      english: 'And pardon us; and forgive us; and have mercy upon us. You are our Protector.',
+      french: 'Pardonne-nous, absous-nous et fais-nous miséricorde. Tu es notre Maître.',
+      ref: 'Al-Baqarah 2:286',
+      reflection: 'This is the prayer that closes Surah Al-Baqarah — a prayer of complete surrender. It is enough. It has always been enough.',
+    },
+    {
+      arabic: 'وَٱسْتَغْفِرُوا۟ رَبَّكُمْ ثُمَّ تُوبُوٓا۟ إِلَيْهِ',
+      english: 'And seek forgiveness of your Lord and turn to Him in repentance.',
+      french: 'Demandez pardon à votre Seigneur, puis repentez-vous vers Lui.',
+      ref: 'Hud 11:3',
+      reflection: 'Two steps: ask — then turn. The asking without the turning is incomplete. The turning is the act of truly beginning again.',
+    },
+    {
+      arabic: 'إِنَّ ٱلْحَسَنَـٰتِ يُذْهِبْنَ ٱلسَّيِّـَٔاتِ',
+      english: 'Indeed, good deeds do away with misdeeds.',
+      french: 'Les bonnes actions effacent les mauvaises.',
+      ref: 'Hud 11:114',
+      reflection: 'You cannot undo the past — but you can build over it. Every good deed is a brick placed over what you regret.',
+    },
+    {
+      arabic: 'وَلَوْلَا فَضْلُ ٱللَّهِ عَلَيْكُمْ وَرَحْمَتُهُۥ مَا زَكَىٰ مِنكُم مِّنْ أَحَدٍ أَبَدًا',
+      english: 'And if not for the favour of Allah upon you and His mercy, not one of you would have been pure ever.',
+      french: 'Si ce n\'était la grâce d\'Allah envers vous et Sa miséricorde, aucun de vous ne serait jamais devenu pur.',
+      ref: 'An-Nur 24:21',
+      reflection: 'No one stands before Allah on their own merit. We are all recipients of a grace that cleans what we could never clean ourselves.',
+    },
+    {
+      arabic: 'وَمَن تَابَ وَعَمِلَ صَـٰلِحًا فَإِنَّهُۥ يَتُوبُ إِلَى ٱللَّهِ مَتَابًا',
+      english: 'And whoever repents and does righteousness — indeed, he repents to Allah with accepted repentance.',
+      french: 'Quiconque se repent et accomplit de bonnes œuvres, celui-là s\'est repenti efficacement auprès d\'Allah.',
+      ref: 'Al-Furqan 25:71',
+      reflection: 'Accepted repentance — not maybe accepted, not conditionally accepted. Repent sincerely, do good, and your return is guaranteed.',
+    },
   ],
 
-  /* ──────────────── INGRATITUDE ──────────────── */
+  /* ══════════════════════════════════════════
+     INGRATITUDE / GRATITUDE — 12 verses
+  ══════════════════════════════════════════ */
   gratitude: [
     {
       arabic: 'لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ',
@@ -601,9 +1131,53 @@ export const VERSES = {
       ref: 'Al-Ma\'idah 5:7',
       reflection: 'To remember is an act of will. Choose, right now, to name one blessing — and watch your sight slowly shift.',
     },
+    {
+      arabic: 'وَآتَاكُم مِّن كُلِّ مَا سَأَلْتُمُوهُ',
+      english: 'And He gave you of all that you asked of Him.',
+      french: 'Il vous a accordé tout ce que vous Lui avez demandé.',
+      ref: 'Ibrahim 14:34',
+      reflection: 'Every prayer you ever made — He heard it. Some were answered as you asked. Others in the way you needed.',
+    },
+    {
+      arabic: 'هُوَ ٱلَّذِى جَعَلَ لَكُمُ ٱلَّيْلَ لِتَسْكُنُوا۟ فِيهِ وَٱلنَّهَارَ مُبْصِرًا',
+      english: 'It is He who made the night for you to rest in and the day to give you sight.',
+      french: 'C\'est Lui qui a fait de la nuit un moment de repos pour vous, et du jour un temps de lumière.',
+      ref: 'Yunus 10:67',
+      reflection: 'Even the rhythm of night and day — rest and wakefulness — is a gift designed for you. You are held in a universe arranged with care.',
+    },
+    {
+      arabic: 'وَٱشْكُرُوا۟ لِلَّهِ إِن كُنتُمْ إِيَّاهُ تَعْبُدُونَ',
+      english: 'And be grateful to Allah if it is Him you worship.',
+      french: 'Et soyez reconnaissants envers Allah si c\'est Lui que vous adorez.',
+      ref: 'Al-Baqarah 2:172',
+      reflection: 'Gratitude and worship are inseparable. To be truly grateful is to acknowledge that everything good in your life has one Source.',
+    },
+    {
+      arabic: 'أَلَمْ تَرَوْا۟ أَنَّ ٱللَّهَ سَخَّرَ لَكُم مَّا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ',
+      english: 'Do you not see that Allah has subjected to you whatever is in the heavens and whatever is on the earth?',
+      french: 'Ne voyez-vous pas qu\'Allah vous a soumis ce qui est dans les cieux et ce qui est sur la terre?',
+      ref: 'Luqman 31:20',
+      reflection: 'The heavens and the earth are in service to you — and you forgot to be grateful? Look around. The generosity is staggering.',
+    },
+    {
+      arabic: 'وَسَخَّرَ لَكُمُ ٱلْأَنْهَـٰرَ',
+      english: 'And He has subjected the rivers for you.',
+      french: 'Et Il vous a soumis les fleuves.',
+      ref: 'Ibrahim 14:32',
+      reflection: 'Rivers. Water. Life itself — subjected for your use. Begin with the water you drank today and build your gratitude from there.',
+    },
+    {
+      arabic: 'وَإِذْ تَأَذَّنَ رَبُّكُمْ لَئِن شَكَرْتُمْ لَأَزِيدَنَّكُمْ ۖ وَلَئِن كَفَرْتُمْ إِنَّ عَذَابِى لَشَدِيدٌ',
+      english: 'And remember when your Lord proclaimed: If you are grateful, I will surely increase you; but if you deny, indeed My punishment is severe.',
+      french: 'Votre Seigneur a proclamé: Si vous êtes reconnaissants, J\'augmenterai certes vos bienfaits; mais si vous êtes ingrats, Mon châtiment est très sévère.',
+      ref: 'Ibrahim 14:7',
+      reflection: 'Two doors stand before you: gratitude that opens abundance, or ingratitude that closes it. The choice is yours to make right now.',
+    },
   ],
 
-  /* ──────────────── DOUBT & UNCERTAINTY ──────────────── */
+  /* ══════════════════════════════════════════
+     DOUBT & UNCERTAINTY — 12 verses
+  ══════════════════════════════════════════ */
   doubt: [
     {
       arabic: 'أَفَلَا يَتَدَبَّرُونَ ٱلْقُرْءَانَ',
@@ -617,7 +1191,7 @@ export const VERSES = {
       english: 'Indeed, in the creation of the heavens and the earth and the alternation of night and day are signs for people of understanding.',
       french: 'Dans la création des cieux et de la terre et dans l\'alternance de la nuit et du jour, il y a des signes pour les doués d\'intelligence.',
       ref: 'Ali Imran 3:190',
-      reflection: 'The signs are not hidden — they are everywhere, in every sunrise, every heartbeat. Doubt is the beginning of a deeper seeing.',
+      reflection: 'The signs are not hidden — they are everywhere, in every sunrise and every heartbeat. Doubt is the beginning of a deeper seeing.',
     },
     {
       arabic: 'سَنُرِيهِمْ ءَايَـٰتِنَا فِى ٱلْءَافَاقِ وَفِىٓ أَنفُسِهِمْ',
@@ -634,22 +1208,66 @@ export const VERSES = {
       reflection: 'Doubt that comes from the limits of human knowledge is natural. It is not weak faith — it is honest humility.',
     },
     {
+      arabic: 'رَبَّنَآ إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِى لِلْإِيمَـٰنِ أَنْ ءَامِنُوا۟ بِرَبِّكُمْ فَـَٔامَنَّا',
+      english: 'Our Lord, indeed we have heard a caller calling to faith, and we have believed.',
+      french: 'Seigneur! Nous avons entendu un appel appeler à la foi, et nous avons cru.',
+      ref: 'Ali Imran 3:193',
+      reflection: 'Belief often begins as a simple, imperfect response to a call you cannot fully explain. That is enough to begin.',
+    },
+    {
+      arabic: 'وَقُل رَّبِّ زِدْنِى عِلْمًا',
+      english: 'And say: My Lord, increase me in knowledge.',
+      french: 'Dis: Seigneur, augmente mon savoir.',
+      ref: 'Ta-Ha 20:114',
+      reflection: 'The answer to doubt is not less thinking — it is more knowledge sought from the right source. Ask Allah to expand your understanding.',
+    },
+    {
+      arabic: 'أَفَلَا يَنظُرُونَ إِلَى ٱلْإِبِلِ كَيْفَ خُلِقَتْ',
+      english: 'Do they not look at the camels — how they are created?',
+      french: 'Ne regardent-ils pas les chameaux et comment ils ont été créés?',
+      ref: 'Al-Ghashiyah 88:17',
+      reflection: 'The Quran asks you to look — really look — at the created world. Doubt dissolves in careful observation. The design is undeniable.',
+    },
+    {
+      arabic: 'ٱلَّذِينَ يَذْكُرُونَ ٱللَّهَ قِيَـٰمًا وَقُعُودًا وَعَلَىٰ جُنُوبِهِمْ وَيَتَفَكَّرُونَ فِى خَلْقِ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ',
+      english: 'Those who remember Allah standing, sitting, and on their sides, and who reflect upon the creation of the heavens and the earth.',
+      french: 'Ceux qui invoquent Allah debout, assis ou couchés et qui méditent sur la création des cieux et de la terre.',
+      ref: 'Ali Imran 3:191',
+      reflection: 'Reflection — real, deep reflection on creation — is an act of worship. Your questioning mind, used rightly, is a gift.',
+    },
+    {
+      arabic: 'أَفَلَمْ يَسِيرُوا۟ فِى ٱلْأَرْضِ فَتَكُونَ لَهُمْ قُلُوبٌ يَعْقِلُونَ بِهَآ',
+      english: 'Have they not traveled through the earth so that they may have hearts with which to reason?',
+      french: 'N\'ont-ils pas parcouru la terre pour avoir des cœurs capables de comprendre?',
+      ref: 'Al-Hajj 22:46',
+      reflection: 'Sometimes the answer to doubt is to go — to move, to witness, to see what the world holds. Allah calls you outward as much as inward.',
+    },
+    {
+      arabic: 'فَٱعْلَمْ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا ٱللَّهُ',
+      english: 'So know that there is no deity except Allah.',
+      french: 'Sache donc qu\'il n\'y a de dieu qu\'Allah.',
+      ref: 'Muhammad 47:19',
+      reflection: 'The invitation is to know — not blindly follow. Seek. Think. Question. And arrive at knowledge, not just inherited belief.',
+    },
+    {
+      arabic: 'شَهِدَ ٱللَّهُ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا هُوَ وَٱلْمَلَـٰٓئِكَةُ وَأُو۟لُوا۟ ٱلْعِلْمِ',
+      english: 'Allah witnesses that there is no deity except Him, and so do the angels and those of knowledge.',
+      french: 'Allah atteste qu\'il n\'y a de dieu que Lui, ainsi que les anges et les détenteurs du savoir.',
+      ref: 'Ali Imran 3:18',
+      reflection: 'Those of knowledge — not blind obedience — are named alongside the angels as witnesses. Your search for truth is honoured.',
+    },
+    {
       arabic: 'أَفَمَن شَرَحَ ٱللَّهُ صَدْرَهُۥ لِلْإِسْلَـٰمِ فَهُوَ عَلَىٰ نُورٍ مِّن رَّبِّهِۦ',
       english: 'Is one whose chest Allah has expanded for Islam, so that he is upon a light from his Lord…',
       french: 'Celui dont Allah a ouvert la poitrine à l\'islam et qui marche dans une lumière venue de son Seigneur…',
       ref: 'Az-Zumar 39:22',
       reflection: 'The light is given — but the chest must be opened to receive it. Ask Him to open yours. This asking is itself a form of certainty.',
     },
-    {
-      arabic: 'رَبَّنَآ إِنَّنَا سَمِعْنَا مُنَادِيًا يُنَادِى لِلْإِيمَـٰنِ أَنْ ءَامِنُوا۟ بِرَبِّكُمْ فَـَٔامَنَّا',
-      english: 'Our Lord, indeed we have heard a caller calling to faith — saying: Believe in your Lord — and we have believed.',
-      french: 'Seigneur! Nous avons entendu un appel appeler à la foi, disant: Croyez en votre Seigneur — et nous avons cru.',
-      ref: 'Ali Imran 3:193',
-      reflection: 'Belief often begins as a simple, imperfect response to a call you cannot fully explain. That is enough to begin.',
-    },
   ],
 
-  /* ──────────────── ENVY & JEALOUSY ──────────────── */
+  /* ══════════════════════════════════════════
+     ENVY & JEALOUSY — 12 verses
+  ══════════════════════════════════════════ */
   envy: [
     {
       arabic: 'وَلَا تَتَمَنَّوْا۟ مَا فَضَّلَ ٱللَّهُ بِهِۦ بَعْضَكُمْ عَلَىٰ بَعْضٍ',
@@ -666,11 +1284,11 @@ export const VERSES = {
       reflection: 'Nothing anyone has was given by accident. And nothing withheld from you was a mistake. The distributor knows exactly what you can carry.',
     },
     {
-      arabic: 'أَمْ يَحْسُدُونَ ٱلنَّاسَ عَلَىٰ مَآ ءَاتَىٰهُمُ ٱللَّهُ مِن فَضْلِهِۦ',
-      english: 'Or do they envy people for what Allah has given them of His bounty?',
-      french: 'Ou bien envient-ils les gens pour ce qu\'Allah leur a accordé de Sa grâce?',
-      ref: 'An-Nisa 4:54',
-      reflection: 'What they have was given by Allah — and so was what you have. Envy is wishing away His decision. Gratitude is trusting it.',
+      arabic: 'وَلَا تَمُدَّنَّ عَيْنَيْكَ إِلَىٰ مَا مَتَّعْنَا بِهِۦٓ أَزْوَٰجًا مِّنْهُمْ زَهْرَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا',
+      english: 'And do not extend your eyes toward what We have given some of them for enjoyment — the splendour of worldly life.',
+      french: 'Ne tends pas les regards vers les jouissances que Nous avons accordées à certains d\'entre eux, fleurs de la vie de ce monde.',
+      ref: 'Ta-Ha 20:131',
+      reflection: 'The splendour you see in others is a flower — beautiful, brief, and not your garden to tend. Your garden is already growing.',
     },
     {
       arabic: 'وَلِكُلٍّ وِجْهَةٌ هُوَ مُوَلِّيهَا',
@@ -687,15 +1305,59 @@ export const VERSES = {
       reflection: 'The difference in provision is His design — not injustice. Within that design is something specific for you that no one else was given.',
     },
     {
-      arabic: 'وَلَا تَمُدَّنَّ عَيْنَيْكَ إِلَىٰ مَا مَتَّعْنَا بِهِۦٓ أَزْوَٰجًا مِّنْهُمْ زَهْرَةَ ٱلْحَيَوٰةِ ٱلدُّنْيَا',
-      english: 'And do not extend your eyes toward what We have given some of them for enjoyment — the splendour of worldly life.',
-      french: 'Ne tends pas les regards vers les jouissances que Nous avons accordées à certains d\'entre eux, fleurs de la vie de ce monde.',
-      ref: 'Ta-Ha 20:131',
-      reflection: 'The splendour you see in others is a flower — beautiful, brief, and not your garden to tend. Your garden is already growing.',
+      arabic: 'أَمْ يَحْسُدُونَ ٱلنَّاسَ عَلَىٰ مَآ ءَاتَىٰهُمُ ٱللَّهُ مِن فَضْلِهِۦ',
+      english: 'Or do they envy people for what Allah has given them of His bounty?',
+      french: 'Ou bien envient-ils les gens pour ce qu\'Allah leur a accordé de Sa grâce?',
+      ref: 'An-Nisa 4:54',
+      reflection: 'What they have was given by Allah — and so was what you have. Envy is wishing away His decision. Gratitude is trusting it.',
+    },
+    {
+      arabic: 'وَفِى ذَٰلِكَ فَلْيَتَنَافَسِ ٱلْمُتَنَـٰفِسُونَ',
+      english: 'And for this let the competitors compete.',
+      french: 'Que les compétiteurs rivalisent pour cela.',
+      ref: 'Al-Mutaffifin 83:26',
+      reflection: 'The only competition worth entering is the one for closeness to Allah. Everything else is a distraction from the real prize.',
+    },
+    {
+      arabic: 'وَلَا تَنسَ نَصِيبَكَ مِنَ ٱلدُّنْيَا',
+      english: 'And do not forget your share of the world.',
+      french: 'Et n\'oublie pas ta part en ce monde.',
+      ref: 'Al-Qasas 28:77',
+      reflection: 'You have your own share — not theirs. Focus on claiming what is yours rather than coveting what was never meant for you.',
+    },
+    {
+      arabic: 'إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ',
+      english: 'Indeed, those who believe and do righteous deeds — for them is a reward uninterrupted.',
+      french: 'Ceux qui croient et accomplissent de bonnes œuvres auront une récompense ininterrompue.',
+      ref: 'Fussilat 41:8',
+      reflection: 'Their wealth ends. Your righteous deeds earn a reward that never stops. This is the better competition.',
+    },
+    {
+      arabic: 'وَلَا يَغْتَب بَّعْضُكُم بَعْضًا',
+      english: 'And do not backbite one another.',
+      french: 'Et ne médisez pas les uns des autres.',
+      ref: 'Al-Hujurat 49:12',
+      reflection: 'Envy and backbiting travel together. When you speak ill of those you envy, you harm yourself more than them. Protect your own heart.',
+    },
+    {
+      arabic: 'وَٱللَّهُ يُؤْتِى مُلْكَهُۥ مَن يَشَآءُ',
+      english: 'And Allah gives His sovereignty to whom He wills.',
+      french: 'Allah accorde Sa souveraineté à qui Il veut.',
+      ref: 'Al-Baqarah 2:247',
+      reflection: 'What anyone has was given by Him — and He gives to whom He wills for reasons beyond your sight. Trust the Giver, not the distribution.',
+    },
+    {
+      arabic: 'وَلَا تَتَمَنَّوْا۟ مَا فَضَّلَ ٱللَّهُ بِهِۦ بَعْضَكُمْ عَلَىٰ بَعْضٍ ۚ وَلِلرِّجَالِ نَصِيبٌ مِّمَّا ٱكْتَسَبُوا۟',
+      english: 'Do not wish for what Allah has given some over others. For men is a share of what they have earned, and for women is a share of what they have earned.',
+      french: 'Ne convoitez pas ce qu\'Allah a accordé aux uns plus qu\'aux autres. Aux hommes revient une part de ce qu\'ils ont acquis, aux femmes une part de ce qu\'elles ont acquis.',
+      ref: 'An-Nisa 4:32',
+      reflection: 'Everyone earns what they work for. The solution to envy is not coveting others\' work — it is building your own.',
     },
   ],
 
-  /* ──────────────── IMPATIENCE ──────────────── */
+  /* ══════════════════════════════════════════
+     IMPATIENCE / PATIENCE — 12 verses
+  ══════════════════════════════════════════ */
   patience: [
     {
       arabic: 'إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ',
@@ -733,11 +1395,53 @@ export const VERSES = {
       reflection: 'Nothing is lost. Every moment of patience, every held breath, every quiet endurance — all of it is stored. None of it disappears.',
     },
     {
+      arabic: 'وَٱللَّهُ يُحِبُّ ٱلصَّـٰبِرِينَ',
+      english: 'And Allah loves the patient.',
+      french: 'Allah aime les endurants.',
+      ref: 'Ali Imran 3:146',
+      reflection: 'This is not just reward — it is love. To endure patiently is to become someone Allah loves.',
+    },
+    {
+      arabic: 'إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا',
+      english: 'Indeed, with every hardship comes ease.',
+      french: 'En vérité, avec la difficulté vient la facilité.',
+      ref: 'Ash-Sharh 94:6',
+      reflection: 'Patience is easier when you know the ease is already present — woven into the hardship, waiting to be revealed.',
+    },
+    {
       arabic: 'وَلَنَبْلُوَنَّكُمْ حَتَّىٰ نَعْلَمَ ٱلْمُجَـٰهِدِينَ مِنكُمْ وَٱلصَّـٰبِرِينَ',
       english: 'And We will surely test you until We distinguish those of you who strive and those who are patient.',
       french: 'Nous vous éprouverons pour connaître ceux qui luttent et ceux qui sont patients parmi vous.',
       ref: 'Muhammad 47:31',
       reflection: 'Your patience is not invisible. It is being observed and distinguished. The One who tests also rewards — perfectly.',
+    },
+    {
+      arabic: 'وَٱصْبِرُوٓا۟ ۚ إِنَّ ٱللَّهَ مَعَ ٱلصَّـٰبِرِينَ',
+      english: 'And persevere — indeed, Allah is with the patient.',
+      french: 'Endurez, car Allah est avec les patients.',
+      ref: 'Al-Anfal 8:46',
+      reflection: 'Persevere — the command in the middle of the storm, not after it clears. He is already there with you in the middle of it.',
+    },
+    {
+      arabic: 'فَصَبْرٌ جَمِيلٌ ۖ وَٱللَّهُ ٱلْمُسْتَعَانُ عَلَىٰ مَا تَصِفُونَ',
+      english: 'So patience is most fitting. And Allah is the one sought for help against what you describe.',
+      french: 'La belle patience s\'impose. C\'est Allah qu\'on implore contre ce que vous décrivez.',
+      ref: 'Yusuf 12:18',
+      reflection: 'Beautiful patience — dignified, graceful endurance. This is the standard. And the help to achieve it comes from Allah.',
+    },
+    {
+      arabic: 'وَبَشِّرِ ٱلصَّـٰبِرِينَ',
+      english: 'And give good tidings to the patient.',
+      french: 'Annonce une bonne nouvelle aux patients.',
+      ref: 'Al-Baqarah 2:155',
+      reflection: 'Good news is already attached to your patience. It is coming — not as a maybe, but as a promise.',
+    },
+    {
+      arabic: 'وَلَنَجْزِيَنَّ ٱلَّذِينَ صَبَرُوٓا۟ أَجْرَهُم بِأَحْسَنِ مَا كَانُوا۟ يَعْمَلُونَ',
+      english: 'And We will surely give those who were patient their reward according to the best of what they used to do.',
+      french: 'Nous récompenserons les endurants selon le meilleur de ce qu\'ils faisaient.',
+      ref: 'An-Nahl 16:96',
+      reflection: 'According to the best — not the average, not the minimum. Allah grades your patience at its finest moment and rewards accordingly.',
     },
   ],
 };
