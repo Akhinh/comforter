@@ -1,6 +1,5 @@
 /**
  * THE COMFORTER — Main Application Controller
- * Bootstraps all systems and wires up navigation + events.
  */
 
 import { ParticleSystem }   from './systems/particles.js';
@@ -20,10 +19,9 @@ const verseEngine = new VerseEngine();
 
 /* ═══════════════════════════════════════════════════
    CARD CANVAS REGISTRY
-   Each condition card gets its own mini canvas
-   running a unique animation.
+
 ═══════════════════════════════════════════════════ */
-let cardAnimators   = [];   // [{ canvas, ctx, animKey }]
+let cardAnimators   = [];   
 let cardsAnimating  = false;
 
 function initCardCanvases() {
